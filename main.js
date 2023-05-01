@@ -16,5 +16,7 @@ const personajesMenores = personajesSimpsons.filter(personaje => personaje.edad<
 //const edades = personajesSimpsons.reduce((suma, actual) => suma.edad + actual.edad,0)
 const edades = personajesSimpsons.reduce((acumulador, actual) => acumulador + actual.edad, 0);
 
-console.log(edades)
+const nombres = personajesMenores.map(personaje => personaje.nombre)
+
+console.log(nombres)
 
