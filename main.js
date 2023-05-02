@@ -18,5 +18,11 @@ const edades = personajesSimpsons.reduce((acumulador, actual) => acumulador + ac
 
 const nombres = personajesMenores.map(personaje => personaje.nombre)
 
-console.log(nombres)
+
+const personajesModificados = personajesMenores.map(personaje => {
+    const { ...resto } = personaje; // Utilizamos destructuring para obtener todas las propiedades del objeto excepto la edad
+    return { ...resto, rol: "Estudiante" }; // Devolvemos un nuevo objeto con las mismas propiedades y el nuevo rol "Estudiante"
+  });
+  
+console.log(personajesModificados);
 
